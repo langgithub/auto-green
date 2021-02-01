@@ -21,5 +21,6 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull
           echo "1" >> hello.txt
+          git add .
           git commit -m "a commit a day keeps your girlfriend away"
           git push
