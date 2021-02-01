@@ -19,6 +19,7 @@ jobs:
           git config --local user.email "langgithub@gmail.com"
           git config --local user.name "langgithub"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull --rebase
-          git commit --allow-empty -m "a commit a day keeps your girlfriend away"
+          git pull
+          echo "1" >> hello.txt
+          git commit -m "a commit a day keeps your girlfriend away"
           git push
